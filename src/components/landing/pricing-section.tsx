@@ -58,7 +58,7 @@ export const PricingSection = () => {
               <CardContent>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
                   <li>Small per-event fee for live data.</li>
-                  <li>3% per-registration fee (paid by athletes).</li>
+                  <li>3% per-registration fee (paid by participants).</li>
                 </ul>
               </CardContent>
             </Card>

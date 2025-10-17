@@ -8,7 +8,7 @@ const components = [
   {
     icon: <CalendarPlus className="h-8 w-8 mb-4 text-primary" />,
     title: "Event Management & Registration",
-    description: "The starting line for every event. Create custom registration forms, manage athlete data, and securely process entry fees with our integrated payment gateway.",
+    description: "The starting line for every event. Create custom registration forms, manage participant data, and securely process entry fees with our integrated payment gateway.",
   },
   {
     icon: <Users className="h-8 w-8 mb-4 text-primary" />,
@@ -28,7 +28,7 @@ const components = [
   {
     icon: <Settings2 className="h-8 w-8 mb-4 text-primary" />,
     title: "Scoring Configuration Tool",
-    description: "You define the rules. This key component gives you the power to precisely configure how athlete scores are calculated, ensuring your unique sport is scored correctly.",
+    description: "You define the rules. This key component gives you the power to precisely configure how competitor scores are calculated, ensuring your unique sport is scored correctly.",
   },
 ];
 

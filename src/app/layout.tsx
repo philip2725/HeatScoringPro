@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "HeatscoringPro",
-  description: "Custom Event-management & Scoring System for Professional Sports Events.",
+  description: "The All-in-One Platform for Competitive Events.",
 };
 
 export default function RootLayout({

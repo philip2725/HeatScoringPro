@@ -20,7 +20,7 @@ export const HeroSection = () => {
             From Registration to Final Score: The All-in-One Platform for Competitive Events.
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            Escape the limitations of rigid software and the chaos of spreadsheets. Get a fully managed, custom-tailored platform that handles athlete registration, payments, bracket creation, and live scoring—all in one place.
+            Escape the limitations of rigid software and the chaos of spreadsheets. Get a fully managed, custom-tailored platform that handles event creation, participant registration, payments, custom elimination ladders, and live scoring—all in one place.
           </p>
           <div className="mt-8">
             <Button size="lg" asChild>
