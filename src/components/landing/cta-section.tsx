@@ -53,7 +53,7 @@ export const CtaSection = () => {
   return (
     <motion.section 
       id="consultation" 
-      className="py-12 md:py-24 lg:py-32 bg-secondary"
+      className="py-12 md:py-24 lg:py-32 bg-secondary flex items-center justfiy-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
