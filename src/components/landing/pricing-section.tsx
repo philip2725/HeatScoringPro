@@ -2,18 +2,13 @@
 
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Rocket, TrendingUp, ShieldCheck, Check } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Rocket, TrendingUp, ShieldCheck, Check, Plus } from "lucide-react";
+import React from "react";
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const plans = [
+const components = [
   {
     title: "One-Time Setup",
-    description: "For initial consultation, custom development, and deployment.",
+    description: "Initial consultation, custom development, and deployment.",
     price: "Based on Scope",
     icon: <Rocket className="h-8 w-8 mb-4 text-primary" />,
     features: [
@@ -22,11 +17,10 @@ const plans = [
       "Dedicated Infrastructure Setup",
       "Go-Live Support",
     ],
-    highlighted: false,
   },
   {
     title: "Pay-Per-Use Revenue",
-    description: "We succeed when you do. Our costs are covered by small usage fees.",
+    description: "Our costs are covered by small, transparent usage fees.",
     price: "Usage-Based",
     icon: <TrendingUp className="h-8 w-8 mb-4 text-primary" />,
     features: [
@@ -35,11 +29,10 @@ const plans = [
       "Aligned Incentives",
       "Scales with Your Success",
     ],
-    highlighted: true,
   },
   {
     title: "Annual Operations",
-    description: "Covers server maintenance, database integrity, and application updates.",
+    description: "Server maintenance, database integrity, and application updates.",
     price: "Recurring Fee",
     icon: <ShieldCheck className="h-8 w-8 mb-4 text-primary" />,
     features: [
@@ -48,7 +41,6 @@ const plans = [
       "Database Integrity Checks",
       "Priority Support",
     ],
-    highlighted: false,
   },
 ];
 
@@ -64,50 +56,55 @@ export const PricingSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            A Transparent & Fair Pricing Model
+            Our Complete Pricing Structure
           </h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            Predictable Costs for a Long-Term Partnership
+            A transparent, all-in-one model for a long-term partnership. No hidden fees.
           </p>
         </motion.div>
-        <div className="grid w-full max-w-5xl gap-8 md:grid-cols-3 items-stretch">
-          {plans.map((plan, index) => (
-            <motion.div 
-              key={plan.title}
-              variants={cardVariants} 
-              initial="hidden" 
-              whileInView="visible" 
-              viewport={{ once: true }} 
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={cn(plan.highlighted && "md:-translate-y-4")}
-            >
-              <Card className={cn(
-                "h-full flex flex-col border-transparent transition-colors duration-300 bg-secondary/50",
-                plan.highlighted ? "border-primary ring-2 ring-primary" : "hover:border-primary"
-              )}>
-                {plan.highlighted && (
-                  <div className="bg-primary text-primary-foreground text-sm font-bold py-1 text-center">
-                    Recommended
-                  </div>
-                )}
-                <CardHeader className="text-center items-center">
-                  {plan.icon}
-                  <CardTitle>{plan.title}</CardTitle>
-                  <CardDescription>{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex flex-col flex-grow">
-                  <p className="text-4xl font-bold text-center mb-6">{plan.price}</p>
-                  <ul className="space-y-3 text-left flex-grow">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-start">
-                        <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
+        
+        <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4">
+          {components.map((component, index) => (
+            <React.Fragment key={component.title}>
+              <motion.div
+                className="w-full md:w-1/3 flex"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <Card className="w-full h-full flex flex-col bg-secondary/50 border-transparent">
+                  <CardHeader className="text-center items-center">
+                    {component.icon}
+                    <CardTitle>{component.title}</CardTitle>
+                    <CardDescription>{component.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-grow">
+                    <p className="text-4xl font-bold text-center mb-6">{component.price}</p>
+                    <ul className="space-y-3 text-left flex-grow">
+                      {component.features.map((feature) => (
+                        <li key={feature} className="flex items-start">
+                          <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-muted-foreground">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {index < components.length - 1 && (
+                <motion.div
+                  className="flex items-center justify-center"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
+                >
+                  <Plus className="h-10 w-10 text-muted-foreground" />
+                </motion.div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>
