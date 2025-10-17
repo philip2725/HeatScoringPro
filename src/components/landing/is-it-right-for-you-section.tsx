@@ -2,6 +2,8 @@
 
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const checklistItems = [
   "Do you manage events with unique or complex elimination brackets?",
@@ -45,15 +47,18 @@ export const IsItRightForYouSection = () => {
             </motion.div>
           ))}
         </div>
-        <motion.p 
-          className="mt-8 text-lg font-medium"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          If you answered yes, we should talk.
-        </motion.p>
+          <p className="text-lg font-medium mb-4">If you answered yes, we should talk.</p>
+          <Button size="lg" asChild>
+            <Link href="#consultation">Let's Talk</Link>
+          </Button>
+        </motion.div>
       </div>
     </motion.section>
   );
