@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Waves, Swords, Dumbbell, CheckCircle2 } from "lucide-react";
+import { Waves, Gamepad2, Dumbbell, CheckCircle2 } from "lucide-react";
 
 const useCases = [
   {
@@ -17,14 +17,14 @@ const useCases = [
     ],
   },
   {
-    icon: <Swords className="h-10 w-10 text-primary" />,
-    title: "National Martial Arts Championship",
-    challenge: "Handling thousands of competitors across dozens of age, weight, and skill divisions with complex double-elimination brackets.",
+    icon: <Gamepad2 className="h-10 w-10 text-primary" />,
+    title: "Esports Championship",
+    challenge: "Managing a large online tournament with a multi-stage format: a round-robin group stage feeding into a final double-elimination bracket.",
     solutions: [
-      "Participant & Division Management allows organizers to create hundreds of specific divisions for seamless online registration.",
-      "Advanced Seeding tools place ranked competitors appropriately to ensure fair matchups in massive brackets.",
-      "The Dynamic Elimination Builder generates and manages complex double-elimination brackets, automatically moving winners and losers.",
-      "Mat-side officials update results in real-time, keeping the event flowing and brackets accurate.",
+      "Effortless Event Setup and Secure Integrated Payments handle the high volume of online team registrations and buy-ins.",
+      "The Dynamic Elimination Builder creates the group stage and links it to the final bracket, automatically advancing top teams based on results.",
+      "Admins use the Live Scoring Engine to instantly input match results, keeping the tournament moving.",
+      "Live Public Leaderboards display a dynamic, real-time bracket that can be embedded on a website or Twitch stream for players and fans.",
     ],
   },
   {
@@ -32,8 +32,8 @@ const useCases = [
     title: "Functional Fitness Competition",
     challenge: "Scoring multiple workouts with different metrics (time, reps, weight) and calculating a single, unified leaderboard.",
     solutions: [
-      "The Scoring Configuration Tool is used to define custom scoring rules for each unique workout (e.g., For Time, AMRAP, Max Lift).",
-      "A points-based ranking system is established to calculate a unified score from diverse event results.",
+      "The Scoring Configuration Tool defines unique scoring rules for each workout (e.g., For Time, AMRAP, Max Lift).",
+      "A points-based ranking system is established to calculate a unified score from the diverse event results.",
       "The Live Scoring Engine allows volunteers to input scores as they happen, instantly recalculating the overall leaderboard.",
       "Live Public Leaderboards engage athletes and spectators by displaying real-time standings on venue screens and mobile devices.",
     ],
