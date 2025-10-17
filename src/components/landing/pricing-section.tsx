@@ -4,6 +4,8 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/com
 import { motion } from "framer-motion";
 import { Rocket, TrendingUp, ShieldCheck, Check, Plus } from "lucide-react";
 import React from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const components = [
   {
@@ -107,6 +109,18 @@ export const PricingSection = () => {
             </React.Fragment>
           ))}
         </div>
+
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <Button size="lg" asChild>
+            <Link href="#consultation">Schedule a Consultation</Link>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
