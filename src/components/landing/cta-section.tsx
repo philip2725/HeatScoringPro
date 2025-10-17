@@ -59,7 +59,7 @@ export const CtaSection = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+      <div className=" bg:red-500 container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-3">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Ready for a Scoring Platform That Truly Works For You?
