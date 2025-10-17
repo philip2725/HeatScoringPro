@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 export const SocialProofSection = () => {
   return (
     <motion.section 
-      className="py-12 md:py-24 lg:py-32 flex items-center"
+      className="py-12 md:py-24 lg:py-32 flex items-center justify-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container flex flex-col items-center justify-center text-center px-4 md:px-6">
+      <div className="container flex flex-col items-center text-center px-4 md:px-6">
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Trusted by Leaders in Professional Sports
