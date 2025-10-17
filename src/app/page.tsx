@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/landing/hero-section";
-import { ProblemSolutionSection } from "@/components/landing/problem-solution-section";
+import { CapabilitiesSection } from "@/components/landing/capabilities-section";
 import { CoreComponentsSection } from "@/components/landing/core-components-section";
 import { UseCasesSection } from "@/components/landing/use-cases-section";
 import { PartnershipProcessSection } from "@/components/landing/partnership-process-section";
@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <ProblemSolutionSection />
+        <CapabilitiesSection />
         <CoreComponentsSection />
         <UseCasesSection />
         <PartnershipProcessSection />
