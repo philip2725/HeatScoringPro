@@ -4,8 +4,7 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-// Using the available image as a placeholder for all four slots.
-// You can replace the `src` paths with your other images.
+// TODO: Replace these placeholder paths with your actual image files
 const images = [
   {
     src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
@@ -78,7 +77,7 @@ export const HeroVisual = () => {
           <motion.div
             key={i} // Using index as key since src is repeated
             className={cn(
-              "relative rounded-lg overflow-hidden shadow-lg border-2 border-background/50 bg-background/50 p-2",
+              "relative overflow-hidden",
               image.className
             )}
             custom={i}
@@ -93,7 +92,7 @@ export const HeroVisual = () => {
               alt={image.alt}
               fill={true}
               style={{ objectFit: "contain" }}
-              className="pointer-events-none"
+              className="pointer-events-none rounded-lg"
               priority={i < 2}
               sizes="(max-width: 768px) 50vw, 33vw"
             />
