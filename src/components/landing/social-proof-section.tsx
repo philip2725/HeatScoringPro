@@ -14,21 +14,18 @@ export const SocialProofSection = () => {
       <div className="container flex flex-col items-center text-center px-4 md:px-6">
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Trusted by Leaders in Professional Sports
+            Forged on the Water, Engineered for Any Arena
           </h2>
         </div>
-        <div className="flex justify-center items-center space-x-8">
-          <div className="border rounded-lg px-6 py-3 font-bold text-muted-foreground text-lg bg-secondary/50">
-            PWA
-          </div>
-          {/* Add more logos here */}
-        </div>
-        <div className="mt-12 max-w-3xl">
-          <blockquote className="text-center text-xl italic font-medium text-foreground">
-            <p>"HeatscoringPro has transformed how we run our events. The custom system is flawless and the support is second to none."</p>
-          </blockquote>
-          <cite className="mt-4 block text-center text-muted-foreground">
-            — Race Director, Professional Sports Association
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-6">
+            HeatscoringPro wasn't born in a boardroom. It was conceived in the judges' tower at the European Freestyle Pro Tour (EFPT). As a race director and judge, we experienced firsthand the chaos of unreliable software, the stress of manual scoring, and the limitations of systems that weren't built for the dynamic needs of our sport. We needed a rock-solid, flexible, and intuitive system that could perform flawlessly, even with unstable internet on a remote beach.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8">
+            In solving those complex problems, we realized the core challenges are universal. Every event organizer, regardless of the sport, struggles with registration, payments, complex rules, and the need for mission-critical reliability. We built HeatscoringPro's core to be a flexible, modular system precisely for this reason. The result is a platform with the resilience to handle a professional tour and the flexibility to be tailored to the unique demands of your sport.
+          </p>
+          <cite className="block text-center text-foreground font-medium not-italic">
+            — The Founders, EFPT Race Directors & Developers
           </cite>
         </div>
       </div>
