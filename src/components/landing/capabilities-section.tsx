@@ -20,7 +20,7 @@ const capabilities = [
     icon: <ShieldCheck className="h-8 w-8 mb-4 text-primary" />,
     title: "Ensure Flawless Execution",
     description:
-      "The biggest fear is a system failure during a live event. Our rock-solid, offline-capable Live Scoring Engine ensures 100% uptime, so you can capture scores and update standings with confidence, even with unreliable internet.",
+      "The biggest fear is a system failure during a live event. Our rock-solid, offline-capable Live Scoring Engine ensures continuous operation, so you can capture scores and update standings with confidence, even with unreliable internet.",
   },
   {
     icon: <Wand2 className="h-8 w-8 mb-4 text-primary" />,
