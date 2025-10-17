@@ -19,13 +19,13 @@ export const SocialProofSection = () => {
         </div>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-muted-foreground mb-6">
-            HeatscoringPro wasn't born in a boardroom. It was conceived in the judges' tower at the European Freestyle Pro Tour (EFPT). As a race director and judge, we experienced firsthand the chaos of unreliable software, the stress of manual scoring, and the limitations of systems that weren't built for the dynamic needs of our sport. We needed a rock-solid, flexible, and intuitive system that could perform flawlessly, even with unstable internet on a remote beach.
+            HeatscoringPro wasn't born in a boardroom. It was conceived from direct experience in the judges' tower at the European Freestyle Pro Tour (EFPT). With one of our founders serving as a race director and judge, he saw a clear opportunity to build something better. He envisioned a more robust, flexible, and intuitive platform—one that could handle the unique pressures of a professional tour, from complex scoring to unstable internet on a remote beach.
           </p>
           <p className="text-lg text-muted-foreground mb-8">
-            In solving those complex problems, we realized the core challenges are universal. Every event organizer, regardless of the sport, struggles with registration, payments, complex rules, and the need for mission-critical reliability. We built HeatscoringPro's core to be a flexible, modular system precisely for this reason. The result is a platform with the resilience to handle a professional tour and the flexibility to be tailored to the unique demands of your sport.
+            In solving those complex problems, we realized the core challenges are universal. Every event organizer, regardless of the sport, needs seamless registration, reliable payments, and mission-critical stability. We built HeatscoringPro's core to be a flexible, modular system precisely for this reason. The result is a platform with the resilience to handle a professional tour and the flexibility to be tailored to the unique demands of your sport.
           </p>
           <cite className="block text-center text-foreground font-medium not-italic">
-            — The Founders, EFPT Race Directors & Developers
+            — The Founders
           </cite>
         </div>
       </div>
