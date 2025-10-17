@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { ChevronRight, ChevronDown } from "lucide-react";
+import { ClipboardPen, GanttChartSquare, Rocket } from "lucide-react";
 import React from "react";
 
 const stages = [
@@ -11,18 +11,21 @@ const stages = [
     title: "Conception",
     duration: "1-2 WEEKS",
     description: "We collaborate with your key members to determine exact requirements and create a detailed implementation plan.",
+    icon: <ClipboardPen className="h-8 w-8" />,
   },
   {
     stage: "02",
     title: "Development",
     duration: "8-10 WEEKS",
     description: "We adjust core components, implement custom requirements, and set up your dedicated server and database for live scoring.",
+    icon: <GanttChartSquare className="h-8 w-8" />,
   },
   {
     stage: "03",
     title: "Deployment",
     duration: "1-2 WEEKS",
     description: "We deploy your customized HeatscoringPro version to its dedicated infrastructure, confirm its status with you, and go live.",
+    icon: <Rocket className="h-8 w-8" />,
   },
 ];
 
@@ -47,52 +50,31 @@ export const PartnershipProcessSection = () => {
           </h2>
         </motion.div>
         
-        <div className="w-full max-w-5xl flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-0">
+        <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-8">
           {stages.map((stage, index) => (
-            <React.Fragment key={stage.title}>
-              <motion.div
-                className="w-full md:w-1/3 flex"
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              >
-                <Card className="w-full text-center border-transparent hover:border-primary transition-colors duration-300 bg-background/50 flex flex-col">
-                  <CardHeader>
-                    <div className="mx-auto text-4xl font-bold text-primary mb-2">{stage.stage}</div>
-                    <CardTitle>{stage.title}</CardTitle>
-                    <CardDescription>{stage.duration}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{stage.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {index < stages.length - 1 && (
-                <>
-                  <motion.div 
-                    className="hidden md:flex items-center justify-center px-4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
-                  >
-                    <ChevronRight className="h-12 w-12 text-muted-foreground" />
-                  </motion.div>
-                  <motion.div 
-                    className="flex md:hidden items-center justify-center py-4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
-                  >
-                    <ChevronDown className="h-12 w-12 text-muted-foreground" />
-                  </motion.div>
-                </>
-              )}
-            </React.Fragment>
+            <motion.div
+              key={stage.title}
+              className="w-full flex"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
+              <Card className="w-full text-center bg-background/50 flex flex-col border-t-4 border-primary hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <CardHeader>
+                  <div className="mx-auto w-16 h-16 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                    {stage.icon}
+                  </div>
+                  <div className="text-sm font-bold text-primary tracking-widest">{`STAGE ${stage.stage}`}</div>
+                  <CardTitle className="text-2xl">{stage.title}</CardTitle>
+                  <CardDescription>{stage.duration}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground">{stage.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
