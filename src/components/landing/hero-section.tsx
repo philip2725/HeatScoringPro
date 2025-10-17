@@ -17,7 +17,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-            The All-in-One Management Platform for Competitive Events: From Registration to Final Standings
+            The All-in-One Platform for Competitive Events: From Registration to Final Standings
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
             Escape the limitations of rigid software and the chaos of spreadsheets. Get a fully managed, custom-tailored platform that handles event creation, participant registration, payments, custom elimination ladders, and live scoring—all in one place.
