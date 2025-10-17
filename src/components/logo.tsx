@@ -9,7 +9,14 @@ export const Logo = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect x="4" y="4" width="4" height="16" rx="2" className="fill-primary" />
+        <rect
+          x="4"
+          y="4"
+          width="4"
+          height="16"
+          rx="2"
+          className="fill-primary"
+        />
         <rect
           x="10"
           y="10"
@@ -27,7 +34,7 @@ export const Logo = () => {
           className="fill-primary/40"
         />
       </svg>
-      <span className="font-bold">HeatscoringPro</span>
+      <span className="font-bold">HeatScoringPro</span>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HeatscoringPro",
+  title: "HeatScoringPro",
   description: "The All-in-One Platform for Competitive Events.",
 };
 

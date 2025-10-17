@@ -73,10 +73,16 @@ export const IsItRightForYouSection = () => {
             Stop Fighting Your Software. Start Running Your Event.
           </h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            You've moved past spreadsheets, but your event software still dictates your rules. You're stuck with a 'one-size-fits-none' solution that forces awkward workarounds, is prone to critical errors during live events, and never evolves to meet your actual needs.
+            You've moved past spreadsheets, but your event software still
+            dictates your rules. You're stuck with a 'one-size-fits-none'
+            solution that forces awkward workarounds, is prone to critical
+            errors during live events, and never evolves to meet your actual
+            needs.
           </p>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            HeatscoringPro is different. We're a technology partner, not just a vendor. Answer the questions below to see if our approach is the right fit for you.
+            HeatScoringPro is different. We're a technology partner, not just a
+            vendor. Answer the questions below to see if our approach is the
+            right fit for you.
           </p>
         </div>
 
@@ -130,7 +136,7 @@ export const IsItRightForYouSection = () => {
                   <p className="text-lg text-muted-foreground mb-6 max-w-md mx-auto">
                     You identified {yesCount}{" "}
                     {yesCount === 1 ? "challenge" : "challenges"} that
-                    HeatscoringPro is built to solve.
+                    HeatScoringPro is built to solve.
                   </p>
                   <Button size="lg" asChild>
                     <Link href="#consultation">Let's Talk</Link>

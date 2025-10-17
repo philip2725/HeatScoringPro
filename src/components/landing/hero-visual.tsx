@@ -77,7 +77,7 @@ export const HeroVisual = () => {
           <motion.div
             key={i} // Using index as key since src is repeated
             className={cn(
-              "relative overflow-hidden rounded-lg",
+              "relative overflow-hidden rounded-lg group",
               image.className
             )}
             custom={i}
@@ -96,6 +96,7 @@ export const HeroVisual = () => {
               priority={i < 2}
               sizes="(max-width: 768px) 50vw, 33vw"
             />
+            <div className="absolute inset-0 bg-background/40 group-hover:bg-background/0 transition-colors duration-300" />
           </motion.div>
         ))}
       </div>

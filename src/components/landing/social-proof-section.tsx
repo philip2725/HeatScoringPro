@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const SocialProofSection = () => {
   return (
-    <motion.section 
+    <motion.section
       className="py-12 md:py-24 lg:py-32 flex items-center justify-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -19,10 +19,22 @@ export const SocialProofSection = () => {
         </div>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-muted-foreground mb-6">
-            HeatscoringPro wasn't born in a boardroom. It was conceived from direct experience in the judges' tower at the European Freestyle Pro Tour (EFPT). With one of our founders serving as a race director and judge, he saw a clear opportunity to build something better. He envisioned a more robust, flexible, and intuitive platform—one that could handle the unique pressures of a professional tour, from complex scoring to unstable internet on a remote beach.
+            HeatScoringPro wasn't born in a boardroom. It was conceived from
+            direct experience in the judges' tower at the European Freestyle Pro
+            Tour (EFPT). With one of our founders serving as a race director and
+            judge, he saw a clear opportunity to build something better. He
+            envisioned a more robust, flexible, and intuitive platform—one that
+            could handle the unique pressures of a professional tour, from
+            complex scoring to unstable internet on a remote beach.
           </p>
           <p className="text-lg text-muted-foreground mb-8">
-            In solving those complex problems, we realized the core challenges are universal. Every event organizer, regardless of the sport, needs seamless registration, reliable payments, and mission-critical stability. We built HeatscoringPro's core to be a flexible, modular system precisely for this reason. The result is a platform with the resilience to handle a professional tour and the flexibility to be tailored to the unique demands of your sport.
+            In solving those complex problems, we realized the core challenges
+            are universal. Every event organizer, regardless of the sport, needs
+            seamless registration, reliable payments, and mission-critical
+            stability. We built HeatscoringPro's core to be a flexible, modular
+            system precisely for this reason. The result is a platform with the
+            resilience to handle a professional tour and the flexibility to be
+            tailored to the unique demands of your sport.
           </p>
           <cite className="block text-center text-foreground font-medium not-italic">
             — The Founders
