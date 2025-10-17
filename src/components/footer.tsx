@@ -5,7 +5,7 @@ import { Logo } from "./logo";
 export const Footer = () => {
   return (
     <footer className="border-t bg-secondary/50">
-      <div className="container py-16">
+      <div className="container py-16 px-4">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <Logo />
