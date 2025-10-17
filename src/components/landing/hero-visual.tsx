@@ -19,7 +19,7 @@ export const HeroVisual = () => {
         }}
       />
       <motion.div
-        className="absolute w-32 h-32 rounded-full bg-secondary/20 blur-xl"
+        className="absolute w-32 h-32 rounded-full bg-muted-foreground/10 dark:bg-secondary/20 blur-xl"
         animate={{
           scale: [1, 0.8, 1],
           y: [0, -20, 0],
@@ -33,24 +33,24 @@ export const HeroVisual = () => {
       />
 
       {/* Animated Leaderboard Card */}
-      <div className="relative w-64 h-64 border border-primary/20 rounded-lg bg-background/50 backdrop-blur-sm flex flex-col items-start justify-center p-6 space-y-4 overflow-hidden">
+      <div className="relative w-64 h-64 border border-primary/20 rounded-lg bg-secondary dark:bg-background/50 backdrop-blur-sm flex flex-col items-start justify-center p-6 space-y-4 overflow-hidden">
         <motion.div 
           className="h-4 bg-primary rounded-full"
           animate={{ width: ["60%", "90%", "75%", "90%", "60%"] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
         />
         <motion.div 
-          className="h-4 bg-secondary rounded-full"
+          className="h-4 bg-muted-foreground/40 dark:bg-secondary rounded-full"
           animate={{ width: ["80%", "50%", "90%", "50%", "80%"] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
         />
         <motion.div 
-          className="h-4 bg-secondary rounded-full"
+          className="h-4 bg-muted-foreground/40 dark:bg-secondary rounded-full"
           animate={{ width: ["50%", "70%", "60%", "70%", "50%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
         />
          <motion.div 
-          className="h-4 bg-secondary rounded-full"
+          className="h-4 bg-muted-foreground/40 dark:bg-secondary rounded-full"
           animate={{ width: ["70%", "60%", "80%", "60%", "70%"] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
         />
