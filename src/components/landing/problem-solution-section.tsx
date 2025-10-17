@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const ProblemSolutionSection = () => {
   return (
     <motion.section 
-      className="py-12 md:py-24 lg:py-32 bg-secondary flex items-center"
+      className="py-12 md:py-24 lg:py-32 bg-secondary flex items-center justify-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
