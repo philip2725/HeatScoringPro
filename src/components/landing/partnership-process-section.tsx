@@ -35,33 +35,33 @@ export const PartnershipProcessSection = () => {
             Your Bespoke Platform in 3 Transparent Stages
           </h2>
         </motion.div>
-        <div className="relative max-w-3xl w-full">
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2" aria-hidden="true"></div>
-          <div className="space-y-12">
+        
+        <div className="w-full max-w-2xl">
+          <div>
             {stages.map((stage, index) => (
               <motion.div
                 key={index}
-                className="relative flex items-start gap-6"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                className="flex gap-6"
+                initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <div className="absolute left-4 top-1 w-4 h-4 bg-primary rounded-full -translate-x-1/2 border-4 border-secondary"></div>
-                <div className="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-8">
-                  {index % 2 !== 0 && <div className="hidden md:block">&nbsp;</div>}
+                {/* Timeline Column */}
+                <div className="flex flex-col items-center">
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full font-bold text-xl z-10">
+                    {index + 1}
+                  </div>
+                  {index < stages.length - 1 && (
+                    <div className="w-0.5 flex-grow bg-border -mt-1"></div>
+                  )}
+                </div>
+                
+                {/* Content Column */}
+                <div className="pb-16">
                   <div className="text-sm font-semibold text-primary">{stage.duration}</div>
                   <h3 className="text-2xl font-bold mt-1">{stage.title}</h3>
                   <p className="mt-2 text-muted-foreground">{stage.description}</p>
-                </div>
-                <div className="hidden md:block md:w-1/2 md:pl-8">
-                  {index % 2 === 0 && (
-                    <>
-                      <div className="text-sm font-semibold text-primary">{stage.duration}</div>
-                      <h3 className="text-2xl font-bold mt-1">{stage.title}</h3>
-                      <p className="mt-2 text-muted-foreground">{stage.description}</p>
-                    </>
-                  )}
                 </div>
               </motion.div>
             ))}
