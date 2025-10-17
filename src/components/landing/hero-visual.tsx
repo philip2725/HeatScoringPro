@@ -77,7 +77,7 @@ export const HeroVisual = () => {
           <motion.div
             key={i} // Using index as key since src is repeated
             className={cn(
-              "relative overflow-hidden",
+              "relative overflow-hidden rounded-lg",
               image.className
             )}
             custom={i}
@@ -91,8 +91,8 @@ export const HeroVisual = () => {
               src={image.src}
               alt={image.alt}
               fill={true}
-              style={{ objectFit: "contain" }}
-              className="pointer-events-none rounded-lg"
+              style={{ objectFit: "cover" }}
+              className="pointer-events-none"
               priority={i < 2}
               sizes="(max-width: 768px) 50vw, 33vw"
             />
