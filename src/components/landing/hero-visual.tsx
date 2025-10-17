@@ -11,7 +11,7 @@ const images = [
     className: "col-span-2 row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1549637643-45c35a36b394?q=80&w=1932&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1549637643-45c35a36b394?q=80&w=1932&auto-format&fit=crop",
     alt: "Snowboarder in mid-air",
     className: "col-span-2 row-span-1",
   },
@@ -76,7 +76,7 @@ export const HeroVisual = () => {
           <motion.div
             key={image.src}
             className={cn(
-              "relative rounded-lg overflow-hidden shadow-lg border-2 border-background/50",
+              "relative rounded-lg overflow-hidden shadow-lg border-2 border-background/50 bg-background p-2",
               image.className
             )}
             custom={i}
@@ -90,7 +90,7 @@ export const HeroVisual = () => {
               src={image.src}
               alt={image.alt}
               fill={true}
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "contain" }}
               className="pointer-events-none"
               priority={i < 2}
               sizes="(max-width: 768px) 50vw, 33vw"
