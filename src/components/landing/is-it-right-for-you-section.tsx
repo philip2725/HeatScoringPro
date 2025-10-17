@@ -70,10 +70,13 @@ export const IsItRightForYouSection = () => {
       <div className="container flex flex-col items-center text-center px-4 md:px-6">
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Is HeatscoringPro Right For You?
+            Stop Fighting Your Software. Start Running Your Event.
           </h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            Answer these questions to see if we're a good fit.
+            You've moved past spreadsheets, but your event software still dictates your rules. You're stuck with a 'one-size-fits-none' solution that forces awkward workarounds, is prone to critical errors during live events, and never evolves to meet your actual needs.
+          </p>
+          <p className="mt-4 text-muted-foreground md:text-xl">
+            HeatscoringPro is different. We're a technology partner, not just a vendor. Answer the questions below to see if our approach is the right fit for you.
           </p>
         </div>
 
