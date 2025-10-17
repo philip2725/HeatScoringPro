@@ -18,15 +18,15 @@ const capabilities = [
   },
   {
     icon: <ShieldCheck className="h-8 w-8 mb-4 text-primary" />,
-    title: "Ensure Flawless Execution",
+    title: "Built for Mission-Critical Moments",
     description:
-      "The biggest fear is a system failure during a live event. Our rock-solid, offline-capable Live Scoring Engine ensures continuous operation, so you can capture scores and update standings with confidence, even with unreliable internet.",
+      "From handling high-volume registrations to processing secure payments and running live scoring, every component is built for stability. Our platform is engineered for the mission-critical moments of your event, ensuring a smooth experience for you and your participants.",
   },
   {
     icon: <Wand2 className="h-8 w-8 mb-4 text-primary" />,
-    title: "Adapt to Your Unique Rules",
+    title: "A Platform That Adapts to You",
     description:
-      "No two competitions are the same. Our Dynamic Elimination Builder and Scoring Configuration Tool provide a flexible foundation that adapts to your unique format, scoring nuances, and progression rules.",
+      "Your event is unique. Our platform is built to match. From custom registration forms and flexible payment options to configurable scoring and progression rules, we tailor the system to your exact requirements. Stop forcing your event into a rigid box.",
   },
 ];
 
