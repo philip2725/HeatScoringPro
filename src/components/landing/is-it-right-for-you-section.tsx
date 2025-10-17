@@ -21,8 +21,8 @@ export const IsItRightForYouSection = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container px-4 md:px-6">
-        <div className="mx-auto max-w-3xl text-center mb-12">
+      <div className="container flex flex-col items-center text-center px-4 md:px-6">
+        <div className="max-w-3xl mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Is HeatscoringPro Right For You?
           </h2>
@@ -30,7 +30,7 @@ export const IsItRightForYouSection = () => {
             Built for Demanding Competitions
           </p>
         </div>
-        <div className="mx-auto max-w-2xl space-y-4">
+        <div className="w-full max-w-2xl space-y-4 text-left">
           {checklistItems.map((item, index) => (
             <motion.div 
               key={index} 
@@ -46,7 +46,7 @@ export const IsItRightForYouSection = () => {
           ))}
         </div>
         <motion.p 
-          className="mt-8 text-center text-lg font-medium"
+          className="mt-8 text-lg font-medium"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

@@ -77,9 +77,9 @@ const cardVariants = {
 export const CoreComponentsSection = () => {
   return (
     <section className="py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
+      <div className="container flex flex-col items-center px-4 md:px-6">
         <motion.div
-          className="mx-auto max-w-3xl text-center mb-12"
+          className="max-w-3xl text-center mb-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

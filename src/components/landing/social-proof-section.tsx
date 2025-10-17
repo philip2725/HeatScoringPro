@@ -11,8 +11,8 @@ export const SocialProofSection = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container px-4 md:px-6">
-        <div className="mx-auto max-w-3xl text-center mb-12">
+      <div className="container flex flex-col items-center text-center px-4 md:px-6">
+        <div className="max-w-3xl mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Trusted by Leaders in Professional Sports
           </h2>
@@ -23,7 +23,7 @@ export const SocialProofSection = () => {
           </div>
           {/* Add more logos here */}
         </div>
-        <div className="mt-12 max-w-3xl mx-auto">
+        <div className="mt-12 max-w-3xl">
           <blockquote className="text-center text-xl italic font-medium text-foreground">
             <p>"HeatscoringPro has transformed how we run our events. The custom system is flawless and the support is second to none."</p>
           </blockquote>

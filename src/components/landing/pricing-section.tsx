@@ -11,9 +11,9 @@ const cardVariants = {
 export const PricingSection = () => {
   return (
     <section className="py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
+      <div className="container flex flex-col items-center px-4 md:px-6">
         <motion.div 
-          className="mx-auto max-w-3xl text-center mb-12"
+          className="max-w-3xl text-center mb-12"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,7 +26,7 @@ export const PricingSection = () => {
             Predictable Costs for a Long-Term Partnership
           </p>
         </motion.div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid w-full max-w-5xl gap-8 md:grid-cols-3">
           <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
             <Card className="h-full border-transparent hover:border-primary transition-colors duration-300 bg-secondary/50">
               <CardHeader>

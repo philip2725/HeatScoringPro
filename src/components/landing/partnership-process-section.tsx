@@ -23,9 +23,9 @@ const stages = [
 export const PartnershipProcessSection = () => {
   return (
     <section className="py-12 md:py-24 lg:py-32 bg-secondary">
-      <div className="container px-4 md:px-6">
+      <div className="container flex flex-col items-center px-4 md:px-6">
         <motion.div 
-          className="mx-auto max-w-3xl text-center mb-16"
+          className="max-w-3xl text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -35,7 +35,7 @@ export const PartnershipProcessSection = () => {
             Your Bespoke Platform in 3 Transparent Stages
           </h2>
         </motion.div>
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-3xl w-full">
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2" aria-hidden="true"></div>
           <div className="space-y-12">
             {stages.map((stage, index) => (
