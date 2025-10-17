@@ -1,7 +1,42 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+
+// Using the available image as a placeholder for all four slots.
+// You can replace the `src` paths with your other images.
+const images = [
+  {
+    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
+    alt: "Athlete preparing for an event",
+  },
+  {
+    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
+    alt: "Athlete preparing for an event",
+  },
+  {
+    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
+    alt: "Athlete preparing for an event",
+  },
+  {
+    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
+    alt: "Athlete preparing for an event",
+  },
+];
+
+const imageVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
 
 export const HeroVisual = () => {
   return (
@@ -33,27 +68,31 @@ export const HeroVisual = () => {
         }}
       />
 
-      {/* Single Image Display */}
-      <motion.div
-        className="relative w-full h-full max-w-4xl rounded-lg overflow-hidden shadow-lg border-2 border-background/50"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.8,
-          ease: "easeOut",
-        }}
-        whileHover={{ scale: 1.03, zIndex: 10 }}
-      >
-        <Image
-          src="/pexels-alexandre-saraiva-carniato-583650-2103783.jpg"
-          alt="Athlete preparing for an event"
-          fill={true}
-          style={{ objectFit: "cover" }}
-          className="pointer-events-none"
-          priority
-          sizes="(max-width: 768px) 80vw, 50vw"
-        />
-      </motion.div>
+      {/* Image Grid */}
+      <div className="relative w-full max-w-4xl h-[300px] md:h-[450px] grid grid-cols-2 grid-rows-2 gap-4">
+        {images.map((image, i) => (
+          <motion.div
+            key={i} // Using index as key since src is repeated
+            className="relative rounded-lg overflow-hidden shadow-lg border-2 border-background/50 bg-background/50 p-2"
+            custom={i}
+            initial="hidden"
+            animate="visible"
+            variants={imageVariants}
+            whileHover={{ scale: 1.03, zIndex: 10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill={true}
+              style={{ objectFit: "contain" }}
+              className="pointer-events-none"
+              priority={i < 2}
+              sizes="(max-width: 768px) 50vw, 33vw"
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };
