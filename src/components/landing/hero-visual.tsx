@@ -73,7 +73,7 @@ export const HeroVisual = () => {
       />
 
       {/* Asymmetric Image Grid */}
-      <div className="relative w-full max-w-4xl h-[300px] md:h-[450px] grid grid-cols-3 grid-rows-3 gap-4">
+      <div className="relative w-full max-w-5xl h-full grid grid-cols-3 grid-rows-3 gap-4">
         {images.map((image, i) => (
           <motion.div
             key={i} // Using index as key since src is repeated

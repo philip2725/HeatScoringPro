@@ -29,7 +29,7 @@ export const HeroSection = () => {
           </div>
         </motion.div>
         <motion.div 
-          className="h-96"
+          className="h-[32rem] md:h-[40rem]"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
