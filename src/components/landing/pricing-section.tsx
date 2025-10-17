@@ -2,11 +2,55 @@
 
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { Rocket, TrendingUp, ShieldCheck, Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
+
+const plans = [
+  {
+    title: "One-Time Setup",
+    description: "For initial consultation, custom development, and deployment.",
+    price: "Based on Scope",
+    icon: <Rocket className="h-8 w-8 mb-4 text-primary" />,
+    features: [
+      "Detailed Consultation",
+      "Custom Feature Development",
+      "Dedicated Infrastructure Setup",
+      "Go-Live Support",
+    ],
+    highlighted: false,
+  },
+  {
+    title: "Pay-Per-Use Revenue",
+    description: "We succeed when you do. Our costs are covered by small usage fees.",
+    price: "Usage-Based",
+    icon: <TrendingUp className="h-8 w-8 mb-4 text-primary" />,
+    features: [
+      "Small Per-Event Fee for Live Data",
+      "3% Per-Registration Fee",
+      "Aligned Incentives",
+      "Scales with Your Success",
+    ],
+    highlighted: true,
+  },
+  {
+    title: "Annual Operations",
+    description: "Covers server maintenance, database integrity, and application updates.",
+    price: "Recurring Fee",
+    icon: <ShieldCheck className="h-8 w-8 mb-4 text-primary" />,
+    features: [
+      "Server & Database Maintenance",
+      "Security & Performance Updates",
+      "Database Integrity Checks",
+      "Priority Support",
+    ],
+    highlighted: false,
+  },
+];
 
 export const PricingSection = () => {
   return (
@@ -26,43 +70,45 @@ export const PricingSection = () => {
             Predictable Costs for a Long-Term Partnership
           </p>
         </motion.div>
-        <div className="grid w-full max-w-5xl gap-8 md:grid-cols-3">
-          <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
-            <Card className="h-full border-transparent hover:border-primary transition-colors duration-300 bg-secondary/50">
-              <CardHeader>
-                <CardTitle>One-Time Setup Fee</CardTitle>
-                <CardDescription>Fixed fee for initial consultation, custom development, and deployment.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-4xl font-bold">€5,000</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-          <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
-            <Card className="h-full border-transparent hover:border-primary transition-colors duration-300 bg-secondary/50">
-              <CardHeader>
-                <CardTitle>Annual Operations Fee</CardTitle>
-                <CardDescription>Covers server maintenance, database integrity, and application updates.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg text-muted-foreground">A recurring fee to keep your system running flawlessly.</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-          <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
-            <Card className="h-full border-transparent hover:border-primary transition-colors duration-300 bg-secondary/50">
-              <CardHeader>
-                <CardTitle>Pay-Per-Use Revenue</CardTitle>
-                <CardDescription>We succeed when you do. Our costs are covered by small usage fees.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>Small per-event fee for live data.</li>
-                  <li>3% per-registration fee (paid by participants).</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </motion.div>
+        <div className="grid w-full max-w-5xl gap-8 md:grid-cols-3 items-stretch">
+          {plans.map((plan, index) => (
+            <motion.div 
+              key={plan.title}
+              variants={cardVariants} 
+              initial="hidden" 
+              whileInView="visible" 
+              viewport={{ once: true }} 
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={cn(plan.highlighted && "md:-translate-y-4")}
+            >
+              <Card className={cn(
+                "h-full flex flex-col border-transparent transition-colors duration-300 bg-secondary/50",
+                plan.highlighted ? "border-primary ring-2 ring-primary" : "hover:border-primary"
+              )}>
+                {plan.highlighted && (
+                  <div className="bg-primary text-primary-foreground text-sm font-bold py-1 text-center">
+                    Recommended
+                  </div>
+                )}
+                <CardHeader className="text-center items-center">
+                  {plan.icon}
+                  <CardTitle>{plan.title}</CardTitle>
+                  <CardDescription>{plan.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-col flex-grow">
+                  <p className="text-4xl font-bold text-center mb-6">{plan.price}</p>
+                  <ul className="space-y-3 text-left flex-grow">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start">
+                        <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
