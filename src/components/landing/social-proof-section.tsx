@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const SocialProofSection = () => {
   return (
     <motion.section 
-      className="py-12 md:py-24 lg:py-32"
+      className="py-12 md:py-24 lg:py-32 flex items-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

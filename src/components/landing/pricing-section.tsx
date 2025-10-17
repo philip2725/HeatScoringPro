@@ -10,7 +10,7 @@ const cardVariants = {
 
 export const PricingSection = () => {
   return (
-    <section className="py-12 md:py-24 lg:py-32">
+    <section className="py-12 md:py-24 lg:py-32 flex items-center">
       <div className="container flex flex-col items-center px-4 md:px-6">
         <motion.div 
           className="max-w-3xl text-center mb-12"
