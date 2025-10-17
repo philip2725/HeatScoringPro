@@ -9,7 +9,7 @@ import { PricingSection } from "@/components/landing/pricing-section";
 import { IsItRightForYouSection } from "@/components/landing/is-it-right-for-you-section";
 import { SocialProofSection } from "@/components/landing/social-proof-section";
 import { CtaSection } from "@/components/landing/cta-section";
-import { HeroVisual } from "@/components/landing/hero-visual";
+import { FaqSection } from "@/components/landing/faq-section";
 
 export default function Home() {
   return (
@@ -18,12 +18,21 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <CapabilitiesSection />
-        <CoreComponentsSection />
+        <div id="features">
+          <CoreComponentsSection />
+        </div>
         <UseCasesSection />
-        <PartnershipProcessSection />
-        <PricingSection />
+        <div id="process">
+          <PartnershipProcessSection />
+        </div>
+        <div id="pricing">
+          <PricingSection />
+        </div>
         <IsItRightForYouSection />
         <SocialProofSection />
+        <div id="faq">
+          <FaqSection />
+        </div>
         <CtaSection />
       </main>
       <Footer />
