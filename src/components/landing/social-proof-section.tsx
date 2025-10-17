@@ -14,7 +14,7 @@ export const SocialProofSection = () => {
       <div className="container flex flex-col items-center text-center px-4 md:px-6">
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Forged on the Water, Engineered for Any Arena
+            Born from Professional Windsurfing, Engineered for Any Arena
           </h2>
         </div>
         <div className="max-w-4xl mx-auto">
