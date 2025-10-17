@@ -22,7 +22,7 @@ const stages = [
 
 export const PartnershipProcessSection = () => {
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-secondary flex items-center">
+    <section className="py-12 md:py-24 lg:py-32 bg-secondary flex items-center justify-center">
       <div className="container flex flex-col items-center px-4 md:px-6">
         <motion.div 
           className="max-w-3xl text-center mb-16"
