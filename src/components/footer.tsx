@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Twitter, Linkedin } from "lucide-react";
+import { Logo } from "./logo";
 
 export const Footer = () => {
   return (
@@ -7,7 +8,7 @@ export const Footer = () => {
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
-            <h3 className="text-lg font-bold">HeatscoringPro</h3>
+            <Logo />
             <p className="text-sm text-muted-foreground">
               The All-in-One Platform for Competitive Events.
             </p>

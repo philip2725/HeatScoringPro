@@ -7,6 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import React from "react";
+import { Logo } from "./logo";
 
 const navLinks = [
   { href: "#features", label: "Features" },
@@ -37,8 +38,8 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="font-bold">HeatscoringPro</span>
+        <Link href="/">
+          <Logo />
         </Link>
         
         {!isMobile && (
