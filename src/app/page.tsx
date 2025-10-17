@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/landing/hero-section";
 import { ProblemSolutionSection } from "@/components/landing/problem-solution-section";
 import { CoreComponentsSection } from "@/components/landing/core-components-section";
+import { UseCasesSection } from "@/components/landing/use-cases-section";
 import { PartnershipProcessSection } from "@/components/landing/partnership-process-section";
 import { PricingSection } from "@/components/landing/pricing-section";
 import { IsItRightForYouSection } from "@/components/landing/is-it-right-for-you-section";
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <ProblemSolutionSection />
         <CoreComponentsSection />
+        <UseCasesSection />
         <PartnershipProcessSection />
         <PricingSection />
         <IsItRightForYouSection />
