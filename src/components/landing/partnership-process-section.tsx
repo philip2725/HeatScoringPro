@@ -1,24 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { ChevronRight, ChevronDown } from "lucide-react";
+import React from "react";
 
 const stages = [
   {
+    stage: "01",
     title: "Conception",
-    duration: "STAGE 1 (1-2 WEEKS)",
+    duration: "1-2 WEEKS",
     description: "We collaborate with your key members to determine exact requirements and create a detailed implementation plan.",
   },
   {
+    stage: "02",
     title: "Development",
-    duration: "STAGE 2 (8-10 WEEKS)",
+    duration: "8-10 WEEKS",
     description: "We adjust core components, implement custom requirements, and set up your dedicated server and database for live scoring.",
   },
   {
+    stage: "03",
     title: "Deployment",
-    duration: "STAGE 3 (1-2 WEEKS)",
+    duration: "1-2 WEEKS",
     description: "We deploy your customized HeatscoringPro version to its dedicated infrastructure, confirm its status with you, and go live.",
   },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export const PartnershipProcessSection = () => {
   return (
@@ -36,36 +47,53 @@ export const PartnershipProcessSection = () => {
           </h2>
         </motion.div>
         
-        <div className="w-full max-w-2xl">
-          <div>
-            {stages.map((stage, index) => (
+        <div className="w-full max-w-5xl flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-0">
+          {stages.map((stage, index) => (
+            <React.Fragment key={stage.title}>
               <motion.div
-                key={index}
-                className="flex gap-6"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="w-full md:w-1/3 flex"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                {/* Timeline Column */}
-                <div className="flex flex-col items-center">
-                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full font-bold text-xl z-10">
-                    {index + 1}
-                  </div>
-                  {index < stages.length - 1 && (
-                    <div className="w-0.5 flex-grow bg-border -mt-1"></div>
-                  )}
-                </div>
-                
-                {/* Content Column */}
-                <div className="pb-16">
-                  <div className="text-sm font-semibold text-primary">{stage.duration}</div>
-                  <h3 className="text-2xl font-bold mt-1">{stage.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{stage.description}</p>
-                </div>
+                <Card className="w-full text-center border-transparent hover:border-primary transition-colors duration-300 bg-background/50 flex flex-col">
+                  <CardHeader>
+                    <div className="mx-auto text-4xl font-bold text-primary mb-2">{stage.stage}</div>
+                    <CardTitle>{stage.title}</CardTitle>
+                    <CardDescription>{stage.duration}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{stage.description}</p>
+                  </CardContent>
+                </Card>
               </motion.div>
-            ))}
-          </div>
+
+              {index < stages.length - 1 && (
+                <>
+                  <motion.div 
+                    className="hidden md:flex items-center justify-center px-4"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
+                  >
+                    <ChevronRight className="h-12 w-12 text-muted-foreground" />
+                  </motion.div>
+                  <motion.div 
+                    className="flex md:hidden items-center justify-center py-4"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
+                  >
+                    <ChevronDown className="h-12 w-12 text-muted-foreground" />
+                  </motion.div>
+                </>
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </section>
