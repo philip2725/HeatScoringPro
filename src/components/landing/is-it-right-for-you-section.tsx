@@ -1,9 +1,11 @@
 "use client";
 
-import { CheckCircle2 } from "lucide-react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { CheckCircle2, XCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
 
 const checklistItems = [
   "Do you manage events with unique or complex elimination brackets?",
@@ -14,9 +16,51 @@ const checklistItems = [
   "Are you looking for a technology partner, not just a software vendor?",
 ];
 
+const cardVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 300 : -300,
+    opacity: 0,
+    scale: 0.8,
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+    scale: 1,
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 300 : -300,
+    opacity: 0,
+    scale: 0.8,
+  }),
+};
+
 export const IsItRightForYouSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [yesCount, setYesCount] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const isFinished = activeIndex >= checklistItems.length;
+
+  const handleResponse = (isYes: boolean) => {
+    if (isFinished) return;
+
+    setDirection(isYes ? 1 : -1);
+    if (isYes) {
+      setYesCount((prev) => prev + 1);
+    }
+    setActiveIndex((prev) => prev + 1);
+  };
+
+  const handleReset = () => {
+    setActiveIndex(0);
+    setYesCount(0);
+    setDirection(0);
+  };
+
   return (
-    <motion.section 
+    <motion.section
       className="py-12 md:py-24 lg:py-32 bg-secondary flex items-center justify-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -29,36 +73,100 @@ export const IsItRightForYouSection = () => {
             Is HeatscoringPro Right For You?
           </h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            Built for Demanding Competitions
+            Answer these questions to see if we're a good fit.
           </p>
         </div>
-        <div className="w-full max-w-2xl space-y-4 text-left">
-          {checklistItems.map((item, index) => (
-            <motion.div 
-              key={index} 
-              className="flex items-start space-x-3"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+
+        <div className="w-full max-w-lg h-72 flex flex-col items-center justify-center">
+          <div className="w-full h-48 relative flex items-center justify-center mb-6">
+            <AnimatePresence initial={false} custom={direction}>
+              {!isFinished ? (
+                <motion.div
+                  key={activeIndex}
+                  className="absolute w-full h-full"
+                  custom={direction}
+                  variants={cardVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                  }}
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.7}
+                  onDragEnd={(e, { offset }) => {
+                    if (offset.x > 100) {
+                      handleResponse(true);
+                    } else if (offset.x < -100) {
+                      handleResponse(false);
+                    }
+                  }}
+                >
+                  <Card className="w-full h-full flex items-center justify-center p-6 shadow-xl cursor-grab active:cursor-grabbing">
+                    <CardContent className="p-0">
+                      <p className="text-xl font-medium">
+                        {checklistItems[activeIndex]}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ) : (
+                <motion.div
+                  className="text-center"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h3 className="text-2xl font-bold mb-2">
+                    {yesCount >= 3
+                      ? "It looks like a perfect match!"
+                      : "We might be able to help."}
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6 max-w-md mx-auto">
+                    You identified {yesCount}{" "}
+                    {yesCount === 1 ? "challenge" : "challenges"} that
+                    HeatscoringPro is built to solve.
+                  </p>
+                  <Button size="lg" asChild>
+                    <Link href="#consultation">Let's Talk</Link>
+                  </Button>
+                  <Button variant="link" onClick={handleReset} className="mt-2">
+                    Start Over
+                  </Button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {!isFinished && (
+            <motion.div
+              className="flex space-x-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
             >
-              <CheckCircle2 className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-              <p className="text-lg">{item}</p>
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-card hover:bg-destructive/10 border-2 border-destructive/20 hover:border-destructive"
+                onClick={() => handleResponse(false)}
+              >
+                <XCircle className="h-6 w-6 mr-2 text-destructive" />
+                No
+              </Button>
+              <Button
+                size="lg"
+                className="border-2 border-primary/20 hover:border-primary"
+                onClick={() => handleResponse(true)}
+              >
+                <CheckCircle2 className="h-6 w-6 mr-2" />
+                Yes, this is me
+              </Button>
             </motion.div>
-          ))}
+          )}
         </div>
-        <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <p className="text-lg font-medium mb-4">If you answered yes, we should talk.</p>
-          <Button size="lg" asChild>
-            <Link href="#consultation">Let's Talk</Link>
-          </Button>
-        </motion.div>
       </div>
     </motion.section>
   );
