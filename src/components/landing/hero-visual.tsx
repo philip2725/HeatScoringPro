@@ -4,27 +4,31 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-// TODO: Replace these placeholder paths with your actual image files
 const images = [
   {
-    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
-    alt: "Athlete preparing for an event",
-    className: "col-span-2 row-span-2", // Main image
-  },
-  {
-    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
-    alt: "Athlete preparing for an event",
-    className: "row-span-1",
-  },
-  {
-    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
-    alt: "Athlete preparing for an event",
-    className: "row-span-1",
-  },
-  {
-    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
+    src: "/pexels-eyecatcher-2754957.jpg",
     alt: "Athlete preparing for an event",
     className: "col-span-2 row-span-1",
+  },
+  {
+    src: "/pexels-sergk1-14740931.jpg",
+    alt: "Athlete preparing for an event",
+    className: "col-span-1 row-span-1",
+  },
+  {
+    src: "/pexels-sergio-hurtado-265552058-17819783.jpg",
+    alt: "Athlete preparing for an event",
+    className: "col-span-2 row-span-1",
+  },
+  {
+    src: "/medium-shot-people-playing-game-computers.jpg",
+    alt: "Athlete preparing for an event",
+    className: "col-span-1 row-span-1", // Main image
+  },
+  {
+    src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
+    alt: "Athlete preparing for an event",
+    className: "col-span-3 row-span-1", // Main image
   },
 ];
 
