@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export const HeroVisual = () => {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
+      {/* Background blur circles */}
       <motion.div
         className="absolute w-48 h-48 rounded-full bg-primary/10 blur-2xl"
         animate={{
@@ -30,10 +31,29 @@ export const HeroVisual = () => {
           repeatType: "reverse",
         }}
       />
-      <div className="relative w-64 h-64 border border-primary/20 rounded-lg bg-background/50 backdrop-blur-sm flex items-center justify-center p-4">
-        <div className="w-full h-full border border-primary/30 rounded-md flex items-center justify-center">
-            <span className="text-primary/80 font-mono text-xl">HeatscoringPro</span>
-        </div>
+
+      {/* Animated Leaderboard Card */}
+      <div className="relative w-64 h-64 border border-primary/20 rounded-lg bg-background/50 backdrop-blur-sm flex flex-col items-start justify-center p-6 space-y-4 overflow-hidden">
+        <motion.div 
+          className="h-4 bg-primary rounded-full"
+          animate={{ width: ["60%", "90%", "75%", "90%", "60%"] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
+        />
+        <motion.div 
+          className="h-4 bg-secondary rounded-full"
+          animate={{ width: ["80%", "50%", "90%", "50%", "80%"] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
+        />
+        <motion.div 
+          className="h-4 bg-secondary rounded-full"
+          animate={{ width: ["50%", "70%", "60%", "70%", "50%"] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
+        />
+         <motion.div 
+          className="h-4 bg-secondary rounded-full"
+          animate={{ width: ["70%", "60%", "80%", "60%", "70%"] }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
+        />
       </div>
     </div>
   );
