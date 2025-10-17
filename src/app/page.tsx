@@ -1,12 +1,31 @@
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import {
+  HeroSection,
+  ProblemSolutionSection,
+  CoreComponentsSection,
+  PartnershipProcessSection,
+  PricingSection,
+  IsItRightForYouSection,
+  SocialProofSection,
+  CtaSection,
+} from "@/components/landing";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-1 items-center sm:items-start">
-        <h1>Blank page</h1>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <HeroSection />
+        <ProblemSolutionSection />
+        <CoreComponentsSection />
+        <PartnershipProcessSection />
+        <PricingSection />
+        <IsItRightForYouSection />
+        <SocialProofSection />
+        <CtaSection />
       </main>
-      <MadeWithDyad />
+      <Footer />
     </div>
   );
 }
