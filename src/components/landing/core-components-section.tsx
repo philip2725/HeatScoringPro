@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarPlus, GitMerge, ListOrdered, Calculator, Settings2 } from "lucide-react";
+import { CalendarPlus, GitMerge, ListOrdered, Calculator, Settings2, Users } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
@@ -8,27 +8,27 @@ const components = [
   {
     icon: <CalendarPlus className="h-8 w-8 mb-4 text-primary" />,
     title: "Event Management & Registration",
-    description: "Create events, build custom registration forms, and collect entry fees with our integrated Stripe payment gateway.",
+    description: "The starting line for every event. Create custom registration forms, manage athlete data, and securely process entry fees with our integrated payment gateway.",
+  },
+  {
+    icon: <Users className="h-8 w-8 mb-4 text-primary" />,
+    title: "Divisions & Seeding",
+    description: "Effortlessly manage multiple competition categories like Men, Women, Pro, and Amateur. Our flexible seeding tool lets you generate lists, import your own, and apply them across different divisions.",
   },
   {
     icon: <GitMerge className="h-8 w-8 mb-4 text-primary" />,
     title: "The Elimination Builder",
-    description: "Our unique tool to create fully customizable elimination ladders. Design any number of brackets, automate advancements, and save complex structures for reuse.",
-  },
-  {
-    icon: <ListOrdered className="h-8 w-8 mb-4 text-primary" />,
-    title: "Flexible Seeding Tool",
-    description: "Generate and manage seeding lists with ease. Import your own tables via drag-and-drop and apply them across different eliminations.",
+    description: "Our cornerstone tool for any competition format. Design fully custom elimination ladders for sports or esports, automate advancements, and save complex bracket structures for reuse.",
   },
   {
     icon: <Calculator className="h-8 w-8 mb-4 text-primary" />,
-    title: "Custom Scoring System",
-    description: "A comprehensive system adapted to your specific needs, with dedicated views for Judges, Spotters, Head Judges, and Race Directors.",
+    title: "Live Scoring Engine",
+    description: "The nerve center of your live event. A powerful, adaptable system with dedicated views for Judges, Spotters, and Race Directors, ensuring accuracy and real-time results.",
   },
   {
     icon: <Settings2 className="h-8 w-8 mb-4 text-primary" />,
     title: "Scoring Configuration Tool",
-    description: "A key component that gives you the power to specifically adjust and define precisely how athlete scores are calculated.",
+    description: "You define the rules. This key component gives you the power to precisely configure how athlete scores are calculated, ensuring your unique sport is scored correctly.",
   },
 ];
 
@@ -49,7 +49,7 @@ export const CoreComponentsSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            A Fully Customizable Platform Foundation
+            The All-in-One Event Operating System
           </h2>
         </motion.div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

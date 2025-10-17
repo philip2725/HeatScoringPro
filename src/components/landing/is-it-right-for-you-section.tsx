@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 
 const checklistItems = [
   "Do you manage events with unique or complex elimination brackets?",
-  "Does your scoring system require specific calculations that generic tools can't handle?",
-  "Do you need a secure, high-performance system for live scoring scenarios?",
-  "Are you looking for a technology partner to manage the technical complexities so you can focus on the event?",
+  "Does your scoring system require specific calculations that off-the-shelf software can't handle?",
+  "Are you tired of juggling multiple disconnected tools for registration, payments, and scoring?",
+  "Are you frustrated with rigid software that is error-prone and never gets updated with the features you need?",
+  "Are you looking for a technology partner, not just a software vendor?",
 ];
 
 export const IsItRightForYouSection = () => {

@@ -17,10 +17,10 @@ export const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Stop Forcing Your Event into a Generic Tool.
+            From Registration to Final Score: The All-in-One Platform for Competitive Events.
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            We build and manage custom-tailored scoring systems that fit the unique needs of your sport. Performance, security, and precision, managed exclusively for you.
+            Escape the limitations of rigid software and the chaos of spreadsheets. Get a fully managed, custom-tailored platform that handles athlete registration, payments, bracket creation, and live scoring—all in one place.
           </p>
           <div className="mt-8">
             <Button size="lg" asChild>

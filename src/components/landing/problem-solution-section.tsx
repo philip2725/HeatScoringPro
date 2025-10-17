@@ -14,13 +14,13 @@ export const ProblemSolutionSection = () => {
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Your Sport is Unique. Your Software Should Be, Too.
+            Stop Fighting Your Software. Start Running Your Event.
           </h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            Generic event tools fail to understand your sport's complex eliminations and specific scoring rules. You're left wrestling with inefficient, error-prone spreadsheets.
+            You've moved past spreadsheets, but your event software still dictates your rules. You're stuck with a 'one-size-fits-none' solution that forces awkward workarounds, is prone to critical errors during live events, and never evolves to meet your actual needs.
           </p>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            We follow a per-client philosophy. We adapt our robust core components to your exact requirements, delivering a dedicated and secure solution that empowers you to run your event, your way.
+            HeatscoringPro is different. We offer a fully managed platform, custom-tailored by a dedicated technology partner. We build for reliability, adapt to your exact rules, and continuously evolve the platform with you. You get a system that works for you, not against you.
           </p>
         </div>
       </div>
