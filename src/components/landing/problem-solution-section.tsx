@@ -17,10 +17,10 @@ export const ProblemSolutionSection = () => {
             Stop Fighting Your Software. Start Running Your Event.
           </h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            You've moved past spreadsheets, but your event software still dictates your rules. You're stuck with a 'one-size-fits-none' solution that forces awkward workarounds, is prone to critical errors during live events, and never evolves to meet your actual needs.
+            You've moved past spreadsheets, but your event software still dictates your rules. You're stuck with a 'one-size-fits-none' solution that forces awkward workarounds, is prone to critical errors and crashes during live events, and never evolves to meet your actual needs.
           </p>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            HeatscoringPro is different. We offer a fully managed platform, custom-tailored by a dedicated technology partner. We build for reliability, adapt to your exact rules, and continuously evolve the platform with you. You get a system that works for you, not against you.
+            HeatscoringPro is different. We offer a fully managed platform, custom-tailored by a dedicated technology partner. We build for mission-critical reliability, adapt to your exact rules, and continuously evolve the platform with you. You get a system that works for you, not against you.
           </p>
         </div>
       </div>

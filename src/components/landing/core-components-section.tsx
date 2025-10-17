@@ -23,7 +23,7 @@ const components = [
   {
     icon: <Calculator className="h-8 w-8 mb-4 text-primary" />,
     title: "Live Scoring Engine",
-    description: "The nerve center of your live event. A powerful, adaptable system with dedicated views for Judges, Spotters, and Race Directors, ensuring accuracy and real-time results.",
+    description: "The rock-solid nerve center of your live event. Built on a robust, scalable architecture, it performs flawlessly under pressure and features full offline capability. Judges can score without interruption, and all data syncs automatically the moment a connection is restored.",
   },
   {
     icon: <Settings2 className="h-8 w-8 mb-4 text-primary" />,
