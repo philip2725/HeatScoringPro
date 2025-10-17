@@ -10,18 +10,22 @@ const images = [
   {
     src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
     alt: "Athlete preparing for an event",
+    className: "col-span-2 row-span-2", // Main image
   },
   {
     src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
     alt: "Athlete preparing for an event",
+    className: "row-span-1",
   },
   {
     src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
     alt: "Athlete preparing for an event",
+    className: "row-span-1",
   },
   {
     src: "/pexels-alexandre-saraiva-carniato-583650-2103783.jpg",
     alt: "Athlete preparing for an event",
+    className: "col-span-2 row-span-1",
   },
 ];
 
@@ -68,12 +72,15 @@ export const HeroVisual = () => {
         }}
       />
 
-      {/* Image Grid */}
-      <div className="relative w-full max-w-4xl h-[300px] md:h-[450px] grid grid-cols-2 grid-rows-2 gap-4">
+      {/* Asymmetric Image Grid */}
+      <div className="relative w-full max-w-4xl h-[300px] md:h-[450px] grid grid-cols-3 grid-rows-3 gap-4">
         {images.map((image, i) => (
           <motion.div
             key={i} // Using index as key since src is repeated
-            className="relative rounded-lg overflow-hidden shadow-lg border-2 border-background/50 bg-background/50 p-2"
+            className={cn(
+              "relative rounded-lg overflow-hidden shadow-lg border-2 border-background/50 bg-background/50 p-2",
+              image.className
+            )}
             custom={i}
             initial="hidden"
             animate="visible"
