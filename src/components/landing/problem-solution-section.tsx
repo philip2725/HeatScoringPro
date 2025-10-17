@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export const ProblemSolutionSection = () => {
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-secondary">
+    <motion.section 
+      className="py-12 md:py-24 lg:py-32 bg-secondary"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -14,6 +24,6 @@ export const ProblemSolutionSection = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -1,4 +1,7 @@
+"use client";
+
 import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const checklistItems = [
   "Do you manage events with unique or complex elimination brackets?",
@@ -9,7 +12,13 @@ const checklistItems = [
 
 export const IsItRightForYouSection = () => {
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-secondary">
+    <motion.section 
+      className="py-12 md:py-24 lg:py-32 bg-secondary"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -21,16 +30,29 @@ export const IsItRightForYouSection = () => {
         </div>
         <div className="mx-auto max-w-2xl space-y-4">
           {checklistItems.map((item, index) => (
-            <div key={index} className="flex items-start space-x-3">
-              <CheckCircle2 className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
+            <motion.div 
+              key={index} 
+              className="flex items-start space-x-3"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <CheckCircle2 className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <p className="text-lg">{item}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
-        <p className="mt-8 text-center text-lg font-medium">
+        <motion.p 
+          className="mt-8 text-center text-lg font-medium"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
           If you answered yes, we should talk.
-        </p>
+        </motion.p>
       </div>
-    </section>
+    </motion.section>
   );
 };

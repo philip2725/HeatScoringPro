@@ -1,6 +1,16 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export const SocialProofSection = () => {
   return (
-    <section className="py-12 md:py-24 lg:py-32">
+    <motion.section 
+      className="py-12 md:py-24 lg:py-32"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -8,7 +18,7 @@ export const SocialProofSection = () => {
           </h2>
         </div>
         <div className="flex justify-center items-center space-x-8">
-          <div className="border rounded-lg px-6 py-3 font-bold text-muted-foreground text-lg">
+          <div className="border rounded-lg px-6 py-3 font-bold text-muted-foreground text-lg bg-secondary/50">
             PWA
           </div>
           {/* Add more logos here */}
@@ -22,6 +32,6 @@ export const SocialProofSection = () => {
           </cite>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

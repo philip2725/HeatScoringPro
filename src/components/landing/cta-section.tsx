@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -50,7 +51,14 @@ export const CtaSection = () => {
   }
 
   return (
-    <section id="consultation" className="py-12 md:py-24 lg:py-32 bg-secondary">
+    <motion.section 
+      id="consultation" 
+      className="py-12 md:py-24 lg:py-32 bg-secondary"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
         <div className="space-y-3">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -124,6 +132,6 @@ export const CtaSection = () => {
           </Form>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -1,5 +1,8 @@
+"use client";
+
 import { CalendarPlus, GitMerge, ListOrdered, Calculator, Settings2 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const components = [
   {
@@ -29,24 +32,44 @@ const components = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export const CoreComponentsSection = () => {
   return (
     <section className="py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <div className="mx-auto max-w-3xl text-center mb-12">
+        <motion.div 
+          className="mx-auto max-w-3xl text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             A Fully Customizable Platform Foundation
           </h2>
-        </div>
+        </motion.div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {components.map((component, index) => (
-            <Card key={index}>
-              <CardHeader>
-                {component.icon}
-                <CardTitle>{component.title}</CardTitle>
-                <CardDescription>{component.description}</CardDescription>
-              </CardHeader>
-            </Card>
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="h-full border-transparent hover:border-primary transition-colors duration-300 bg-secondary/50">
+                <CardHeader>
+                  {component.icon}
+                  <CardTitle>{component.title}</CardTitle>
+                  <CardDescription>{component.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

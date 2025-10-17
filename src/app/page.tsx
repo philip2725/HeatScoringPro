@@ -1,15 +1,14 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import {
-  HeroSection,
-  ProblemSolutionSection,
-  CoreComponentsSection,
-  PartnershipProcessSection,
-  PricingSection,
-  IsItRightForYouSection,
-  SocialProofSection,
-  CtaSection,
-} from "@/components/landing";
+import { HeroSection } from "@/components/landing/hero-section";
+import { ProblemSolutionSection } from "@/components/landing/problem-solution-section";
+import { CoreComponentsSection } from "@/components/landing/core-components-section";
+import { PartnershipProcessSection } from "@/components/landing/partnership-process-section";
+import { PricingSection } from "@/components/landing/pricing-section";
+import { IsItRightForYouSection } from "@/components/landing/is-it-right-for-you-section";
+import { SocialProofSection } from "@/components/landing/social-proof-section";
+import { CtaSection } from "@/components/landing/cta-section";
+import { HeroVisual } from "@/components/landing/hero-visual";
 
 export default function Home() {
   return (
