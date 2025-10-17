@@ -10,9 +10,10 @@ const useCases = [
     title: "Professional Surfing Tour",
     challenge: "Managing complex heat progressions and subjective judging from remote locations with unstable internet.",
     solutions: [
-      "Custom elimination builder for man-on-man heats.",
-      "Offline-capable scoring engine for judges.",
-      "Live leaderboards that sync instantly when connected.",
+      "The Scoring Configuration Tool is set for a 10-point scale, automatically calculating heat totals from the top two waves.",
+      "Judges use the Live Scoring Engine on tablets with full offline capability, ensuring scores are captured even with spotty beach wifi.",
+      "The Dynamic Elimination Builder maps out the entire competition, from qualifying rounds to finals, automating athlete progression.",
+      "Live Public Leaderboards provide instant, broadcast-ready results for fans and commentators worldwide.",
     ],
   },
   {
@@ -20,9 +21,10 @@ const useCases = [
     title: "National Martial Arts Championship",
     challenge: "Handling thousands of competitors across dozens of age, weight, and skill divisions with complex double-elimination brackets.",
     solutions: [
-      "Powerful division management for clear segmentation.",
-      "Advanced seeding to ensure fair initial matchups.",
-      "Dynamic bracket builder for custom elimination flows.",
+      "Participant & Division Management allows organizers to create hundreds of specific divisions for seamless online registration.",
+      "Advanced Seeding tools place ranked competitors appropriately to ensure fair matchups in massive brackets.",
+      "The Dynamic Elimination Builder generates and manages complex double-elimination brackets, automatically moving winners and losers.",
+      "Mat-side officials update results in real-time, keeping the event flowing and brackets accurate.",
     ],
   },
   {
@@ -30,9 +32,10 @@ const useCases = [
     title: "Functional Fitness Competition",
     challenge: "Scoring multiple workouts with different metrics (time, reps, weight) and calculating a single, unified leaderboard.",
     solutions: [
-      "Flexible scoring configuration for custom formulas.",
-      "Live scoring engine for instant updates after each event.",
-      "Real-time public leaderboards for athletes and spectators.",
+      "The Scoring Configuration Tool is used to define custom scoring rules for each unique workout (e.g., For Time, AMRAP, Max Lift).",
+      "A points-based ranking system is established to calculate a unified score from diverse event results.",
+      "The Live Scoring Engine allows volunteers to input scores as they happen, instantly recalculating the overall leaderboard.",
+      "Live Public Leaderboards engage athletes and spectators by displaying real-time standings on venue screens and mobile devices.",
     ],
   },
 ];
