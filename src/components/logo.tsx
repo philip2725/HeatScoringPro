@@ -34,7 +34,7 @@ export const Logo = () => {
           className="fill-primary/40"
         />
       </svg>
-      <span className="font-bold">HeatScoringPro</span>
+      <span className="font-bold hidden md:inline">HeatScoringPro</span>
     </div>
   );
 };

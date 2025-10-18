@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, CalendarPlus } from "lucide-react";
 import React from "react";
 import { Logo } from "./logo";
 
@@ -48,9 +48,18 @@ export const Header = () => {
           </nav>
         )}
 
-        <div className="flex items-center gap-4">
-          <Button asChild>
-            <Link href="#consultation">Schedule a Consultation</Link>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Button asChild size={isMobile ? "icon" : "default"}>
+            <Link href="#consultation">
+              {isMobile ? (
+                <>
+                  <CalendarPlus className="h-5 w-5" />
+                  <span className="sr-only">Schedule a Consultation</span>
+                </>
+              ) : (
+                "Schedule a Consultation"
+              )}
+            </Link>
           </Button>
           <ThemeToggle />
           {isMobile && (
