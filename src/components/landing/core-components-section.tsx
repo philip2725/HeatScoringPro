@@ -101,8 +101,13 @@ export const CoreComponentsSection = () => {
             >
               <Card className="h-full border-transparent hover:border-primary transition-colors duration-300 bg-secondary/50">
                 <CardHeader>
-                  {component.icon}
-                  <CardTitle>{component.title}</CardTitle>
+                  
+                  <CardTitle>
+                    <div className="flex gap-2 items-center">
+                      <span>{component.icon}</span>
+                      <span className="-mt-5">{component.title}</span>
+                    </div>
+                  </CardTitle>
                   <CardDescription>{component.description}</CardDescription>
                 </CardHeader>
               </Card>

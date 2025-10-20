@@ -9,22 +9,22 @@ const stages = [
   {
     stage: "01",
     title: "Conception",
-    duration: "1-2 WEEKS",
-    description: "We collaborate with your key members to determine exact requirements and create a detailed implementation plan.",
+    duration: "",
+    description: "We collaborate with you to determine exact requirements and create a detailed implementation plan.",
     icon: <ClipboardPen className="h-8 w-8" />,
   },
   {
     stage: "02",
     title: "Development",
-    duration: "8-10 WEEKS",
+    duration: "",
     description: "We adjust core components, implement custom requirements, and set up your dedicated server and database for live scoring.",
     icon: <GanttChartSquare className="h-8 w-8" />,
   },
   {
     stage: "03",
     title: "Deployment",
-    duration: "1-2 WEEKS",
-    description: "We deploy your customized HeatscoringPro version to its dedicated infrastructure, confirm its status with you, and go live.",
+    duration: "",
+    description: "We deploy your customised HeatscoringPro version to its dedicated infrastructure, confirm its status with you, and go live.",
     icon: <Rocket className="h-8 w-8" />,
   },
 ];
@@ -46,7 +46,7 @@ export const PartnershipProcessSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Your Bespoke Platform in 3 Transparent Stages
+            Your Platform in 3 Transparent Stages
           </h2>
         </motion.div>
         

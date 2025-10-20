@@ -21,15 +21,16 @@ export const SocialProofSection = () => {
           <p className="text-lg text-muted-foreground mb-6">
             HeatScoringPro wasn't born in a boardroom. It was conceived from
             direct experience in the judges' tower at the European Freestyle Pro
-            Tour (EFPT). With one of our founders serving as a race director and
+            Tour (EFPT) and the Professional Windsurfing Association (PWA). 
+            With one of our founders serving as a race director and
             judge, he saw a clear opportunity to build something better. He
             envisioned a more robust, flexible, and intuitive platform—one that
             could handle the unique pressures of a professional tour, from
             complex scoring to unstable internet on a remote beach.
           </p>
           <p className="text-lg text-muted-foreground mb-8">
-            In solving those complex problems, we realized the core challenges
-            are universal. Every event organizer, regardless of the sport, needs
+            In solving those complex problems, we realised the core challenges
+            are universal. Every event organiser, regardless of the sport, needs
             seamless registration, reliable payments, and mission-critical
             stability. We built HeatscoringPro's core to be a flexible, modular
             system precisely for this reason. The result is a platform with the

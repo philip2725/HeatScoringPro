@@ -127,7 +127,7 @@ export const CtaSection = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full">Book My Consultation</Button>
+              <Button type="submit" className="w-full">Book My Demo</Button>
             </form>
           </Form>
         </div>

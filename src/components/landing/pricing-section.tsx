@@ -118,7 +118,7 @@ export const PricingSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <Button size="lg" asChild>
-            <Link href="#consultation">Schedule a Consultation</Link>
+            <Link href="#consultation">Schedule a Demo</Link>
           </Button>
         </motion.div>
       </div>

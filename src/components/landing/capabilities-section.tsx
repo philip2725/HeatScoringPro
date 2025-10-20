@@ -7,23 +7,24 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
+  CardContent,
 } from "@/components/ui/card";
 
 const capabilities = [
   {
-    icon: <LayoutGrid className="h-8 w-8 mb-4 text-primary" />,
+    icon: <LayoutGrid className="h-8 w-8 mb-4 text-primary mx-auto" />,
     title: "Tame the Complexity",
     description:
       "Events involve juggling registrations, payments, schedules, and data. HeatscoringPro unifies these logistics into a single, intuitive dashboard, giving you a clear command center for your entire operation.",
   },
   {
-    icon: <ShieldCheck className="h-8 w-8 mb-4 text-primary" />,
+    icon: <ShieldCheck className="h-8 w-8 mb-4 text-primary mx-auto" />,
     title: "Built for Mission-Critical Moments",
     description:
       "From handling high-volume registrations to processing secure payments and running live scoring, every component is built for stability. Our platform is engineered for the mission-critical moments of your event, ensuring a smooth experience for you and your participants.",
   },
   {
-    icon: <Wand2 className="h-8 w-8 mb-4 text-primary" />,
+    icon: <Wand2 className="h-8 w-8 mb-4 text-primary mx-auto" />,
     title: "A Platform That Adapts to You",
     description:
       "Your event is unique. Our platform is built to match. From custom registration forms and flexible payment options to configurable scoring and progression rules, we tailor the system to your exact requirements. Stop forcing your event into a rigid box.",
@@ -69,8 +70,8 @@ export const CapabilitiesSection = () => {
                 <CardHeader>
                   {capability.icon}
                   <CardTitle>{capability.title}</CardTitle>
-                  <CardDescription>{capability.description}</CardDescription>
                 </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">{capability.description}</CardContent>
               </Card>
             </motion.div>
           ))}

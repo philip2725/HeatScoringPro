@@ -28,7 +28,7 @@ export const HeroSection = () => {
           </p>
           <div className="mt-8">
             <Button size="lg" asChild>
-              <Link href="#consultation">Schedule a Consultation</Link>
+              <Link href="#consultation">Schedule a Demo</Link>
             </Button>
           </div>
         </motion.div>
