@@ -10,6 +10,7 @@ import { IsItRightForYouSection } from "@/components/landing/is-it-right-for-you
 import { SocialProofSection } from "@/components/landing/social-proof-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { FaqSection } from "@/components/landing/faq-section";
+import { HeatscoringLogo } from "@/components/HeatscoringLogo";
 
 export default function Home() {
   return (

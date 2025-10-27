@@ -1,9 +1,10 @@
 import React from "react";
+import { HeatscoringLogo } from "./HeatscoringLogo";
 
 export const Logo = () => {
   return (
     <div className="flex items-center space-x-2">
-      <svg
+      {/* <svg
         className="h-6 w-6"
         viewBox="0 0 24 24"
         fill="none"
@@ -33,7 +34,8 @@ export const Logo = () => {
           rx="2"
           className="fill-primary/40"
         />
-      </svg>
+      </svg> */}
+      <HeatscoringLogo primaryColor="rgb(115, 0, 255)" size={32} /> 
       <span className="font-bold hidden md:inline">HeatScoringPro</span>
     </div>
   );

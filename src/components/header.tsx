@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, CalendarPlus } from "lucide-react";
 import React from "react";
 import { Logo } from "./logo";
+import { HeatscoringLogo } from "./HeatscoringLogo";
 
 const navLinks = [
   { href: "#features", label: "Features" },

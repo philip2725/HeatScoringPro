@@ -20,8 +20,7 @@ export const SocialProofSection = () => {
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-muted-foreground mb-6">
             HeatScoringPro wasn't born in a boardroom. It was conceived from
-            direct experience in the judges' tower at the European Freestyle Pro
-            Tour (EFPT) and the Professional Windsurfing Association (PWA). 
+            direct experience in the judges' tower at international windsurf competitions. 
             With one of our founders serving as a race director and
             judge, he saw a clear opportunity to build something better. He
             envisioned a more robust, flexible, and intuitive platform—one that
